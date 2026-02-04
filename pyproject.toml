@@ -1,0 +1,26 @@
+[project]
+name = "api-gerenciamento-consultas-medicas"
+version = "0.1.0"
+description = "tonysouz"
+authors = [
+    {name = "tonysouz"}
+]
+license = {text = "MIT"}
+requires-python = ">=3.12"
+dependencies = [
+    "django (>=6.0.2,<7.0.0)",
+    "djangorestframework (>=3.16.1,<4.0.0)",
+    "psycopg2-binary (>=2.9.11,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "ruff (>=0.15.0,<0.16.0)",
+    "pytest (>=9.0.2,<10.0.0)",
+    "pytest-django (>=4.11.1,<5.0.0)"
+]
