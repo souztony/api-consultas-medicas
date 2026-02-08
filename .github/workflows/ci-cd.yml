@@ -36,14 +36,10 @@ jobs:
           curl -sSL https://install.python-poetry.org | python3 -
       - name: Install dependencies
         run: |
-          poetry install
+          poetry install --with dev
       - name: Run Tests
         run: |
-          poetry run python manage.py test
-        env:
-          SECRET_KEY: testing-secret-key
-          DB_ENGINE: django.db.backends.sqlite3
-          DB_NAME: ":memory:"
+          DB_ENGINE='django.db.backends.sqlite3' DB_NAME=':memory:' SECRET_KEY='testing-secret-key' poetry run pytest
 
   build:
     runs-on: ubuntu-latest

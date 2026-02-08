@@ -75,7 +75,7 @@ if DB_ENGINE == 'django.db.backends.sqlite3':
     DATABASES = {
         'default': {
             'ENGINE': DB_ENGINE,
-            'NAME': BASE_DIR / config('DB_NAME', default='db.sqlite3'),
+            'NAME': config('DB_NAME', default='db.sqlite3') if config('DB_NAME', default='db.sqlite3') == ':memory:' else BASE_DIR / config('DB_NAME', default='db.sqlite3'),
         }
     }
 else:
