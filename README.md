@@ -76,7 +76,9 @@ A pipeline do GitHub Actions (.github/workflows/ci-cd.yml) automatiza o fluxo:
 1. **Lint**: Verificação de qualidade de código com `ruff`.
 2. **Testes**: Execução dos testes automatizados.
 3. **Build**: Criação da imagem Docker e push para o Amazon ECR.
-4. **Deploy**: Deploy automático no AWS App Runner para Staging e Produção usando os segredos do GitHub.
+4. **Deploy**: Configurado para AWS App Runner via GitHub Actions.
+   > [!NOTE]
+   > O step de deploy foi comentado no arquivo `ci-cd.yml` para evitar custos de infraestrutura pessoal durante o desafio técnico, estando pronto para ser ativado em um ambiente organizacional.
 
 ### Estratégia de Rollback 🔄
 
