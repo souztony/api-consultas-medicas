@@ -1,4 +1,4 @@
-from rest_framework import viewsets, permissions
+from rest_framework import viewsets
 from .models import Appointment
 from .serializers import AppointmentSerializer
 
