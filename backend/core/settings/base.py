@@ -1,5 +1,5 @@
 """
-Base Django settings for api-gerenciamento-consultas-medicas project.
+Base Django settings for api-consultas-medicas project.
 This file contains shared configuration for all environments.
 Environment-specific settings should be in local.py, staging.py, or production.py
 """

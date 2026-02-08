@@ -1,5 +1,5 @@
 [project]
-name = "api-gerenciamento-consultas-medicas"
+name = "api-consultas-medicas"
 version = "0.1.0"
 description = "tonysouz"
 authors = [

@@ -1,4 +1,4 @@
-# API de Gerenciamento de Consultas Médicas - Lacrei Saúde 🌈
+# API de Consultas Médicas - Lacrei Saúde 🌈
 
 API RESTful desenvolvida para o desafio técnico da Lacrei Saúde, com o objetivo de facilitar o gerenciamento de profissionais e consultas médicas, promovendo a inclusão e acessibilidade.
 
