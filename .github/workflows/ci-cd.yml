@@ -38,8 +38,13 @@ jobs:
         run: |
           poetry install --with dev
       - name: Run Tests
+        env:
+          SECRET_KEY: testing-secret-key
+          DB_ENGINE: django.db.backends.sqlite3
+          DB_NAME: ":memory:"
+          DJANGO_SETTINGS_MODULE: backend.settings
         run: |
-          DB_ENGINE='django.db.backends.sqlite3' DB_NAME=':memory:' SECRET_KEY='testing-secret-key' poetry run pytest
+          poetry run pytest -v
 
   build:
     runs-on: ubuntu-latest
