@@ -108,7 +108,8 @@ jobs:
     name: Deploy to AWS
     runs-on: ubuntu-latest
     needs: build
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/staging')
+    # Só executa se for push para main/staging E se as credenciais AWS estiverem configuradas
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/staging') && secrets.AWS_ACCESS_KEY_ID != ''
     steps:
       - uses: actions/checkout@v4
       
