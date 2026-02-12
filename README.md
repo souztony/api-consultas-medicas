@@ -1,4 +1,4 @@
-# API de Gerenciamento de Consultas Médicas - Lacrei Saúde
+# API de Gerenciamento de Consultas Médicas
 
 [![CI/CD Pipeline](https://github.com/souztony/api-consultas-medicas/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/souztony/api-consultas-medicas/actions/workflows/ci-cd.yml)
 [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/)
@@ -410,9 +410,9 @@ Este projeto está sob a licença MIT.
 ## 👥 Contato
 
 **Desenvolvedor**: Tony Souza  
-**Email**: [seu-email]  
-**LinkedIn**: [seu-linkedin]
+**Email**: [tonysouz97@gmail.com]  
+**LinkedIn**: [https://www.linkedin.com/in/souztony/](https://www.linkedin.com/in/souztony/)
 
 ---
 
-Desenvolvido com ❤️ para a Lacrei Saúde
+*Desenvolvido por Tony Souza*
