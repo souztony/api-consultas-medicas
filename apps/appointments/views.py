@@ -2,10 +2,12 @@ from rest_framework import viewsets
 from .models import Appointment
 from .serializers import AppointmentSerializer
 
+
 class AppointmentViewSet(viewsets.ModelViewSet):
     """
     ViewSet para visualização e edição de consultas médicas.
     """
+
     queryset = Appointment.objects.all()
     serializer_class = AppointmentSerializer
     # permission_classes = [permissions.AllowAny]
@@ -14,6 +16,7 @@ class AppointmentViewSet(viewsets.ModelViewSet):
         appointment = serializer.save()
         # Trigger Asaas Mock
         from .services import AsaasService
+
         AsaasService.create_payment_with_split(appointment)
 
     def get_queryset(self):
@@ -21,7 +24,7 @@ class AppointmentViewSet(viewsets.ModelViewSet):
         Opcionalmente filtra as consultas por id do profissional através do parâmetro `professional_id`.
         """
         queryset = Appointment.objects.all()
-        professional_id = self.request.query_params.get('professional_id')
+        professional_id = self.request.query_params.get("professional_id")
         if professional_id is not None:
             queryset = queryset.filter(professional_id=professional_id)
         return queryset

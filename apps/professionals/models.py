@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Professional(models.Model):
     social_name = models.CharField(max_length=255, verbose_name="Nome Social")
     profession = models.CharField(max_length=100, verbose_name="Profissão")
@@ -14,4 +15,4 @@ class Professional(models.Model):
     class Meta:
         verbose_name = "Profissional"
         verbose_name_plural = "Profissionais"
-        ordering = ['social_name']
+        ordering = ["social_name"]

@@ -1,13 +1,14 @@
 from django.db import models
 from apps.professionals.models import Professional
 
+
 class Appointment(models.Model):
     date = models.DateTimeField(verbose_name="Data da Consulta")
     professional = models.ForeignKey(
-        Professional, 
-        on_delete=models.CASCADE, 
-        related_name='appointments',
-        verbose_name="Profissional"
+        Professional,
+        on_delete=models.CASCADE,
+        related_name="appointments",
+        verbose_name="Profissional",
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -18,4 +19,4 @@ class Appointment(models.Model):
     class Meta:
         verbose_name = "Consulta"
         verbose_name_plural = "Consultas"
-        ordering = ['-date']
+        ordering = ["-date"]
